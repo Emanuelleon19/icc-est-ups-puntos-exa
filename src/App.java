@@ -1,4 +1,5 @@
 
+import Controllers.PersonaController;
 import Models.Persona;
 
 public class App {
@@ -61,5 +62,47 @@ public class App {
                 // Si encontró a la persona en el arreglo de personas los datos de dicha persona
                 // y su posición
                 // Si no encontró a la persona en el arreglo de personas
+                
+                PersonaController ordenar = new PersonaController();
+
+                ordenar.sortByAgeWithSelection(personas);
+
+                ordenar.sortByNameWithInsertion(personas);
+                
+                System.out.println("");
+
+                //25
+                int resultado = ordenar.searchBinaryByAge(personas, 25);
+                if (resultado == -1) {
+                        System.out.println("No encontro");
+                } else {
+                        System.out.println("Encontro en la posicion: " + resultado);
+                }
+
+                //70
+                int resultado2 = ordenar.searchBinaryByAge(personas, 70);
+                if (resultado2 == -1) {
+                        System.out.println("No encontro");
+                } else {
+                        System.out.println("Encontro en la posicion: " + resultado2);
+                }
+
+                //Anais
+                int resultado3 = ordenar.searchBinaryByName(personas, "Anais");
+                if (resultado3 == -1) {
+                        System.out.println("No encontro");
+                } else {
+                        System.out.println("Encontro en la posicion: " + resultado3);
+                }
+
+                //Miguel
+                int resultado4 = ordenar.searchBinaryByName(personas, "Miguel");
+                if (resultado4 == -1) {
+                        System.out.println("No encontro");
+                } else {
+                        System.out.println("Encontro en la posicion: " + resultado4);
+                }
+
         }
+
 }

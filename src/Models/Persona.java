@@ -7,8 +7,9 @@ package Models;
  */
 public class Persona {
     // Atributos de la clase
-    String nombre; // Almacena el nombre de la carro
-    int edad; // Almacena la edad de la carro
+    String nombre; 
+    int edad; 
+    
 
     /**
      * Constructor para crear una nueva instancia de Persona con un nombre y edad
@@ -22,4 +23,31 @@ public class Persona {
         this.edad = edad; // Asigna la edad pasada al atributo edad de la clase
     }
 
+
+    public String getNombre() {
+        return nombre;
+    }
+
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+
+    public int getEdad() {
+        return edad;
+    }
+
+
+    public void setEdad(int edad) {
+        this.edad = edad;
+    }
+
+
+    @Override
+    public String toString() {
+        return "Persona [nombre=" + nombre + ", edad=" + edad + "]";
+    }
+    
+    
 }
